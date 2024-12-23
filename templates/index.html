@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MAIL SENDER</title>
   <style>
     body {
@@ -20,6 +21,7 @@
       justify-content: center;
       text-align: center;
       height: 90%;
+      padding: 20px;
     }
     #send {
       color: #fff;
@@ -32,31 +34,42 @@
     }
     #text {
       width: 70%;
-      height: 50%;
+      height: 150px;
       border-radius: 10px;
       color: orange;
       font-size: 20px;
+      padding: 10px;
     }
     #sub {
       background-color: black;
       color: #fff;
       border-radius: 10px;
-      height: 30px;
+      height: 40px;
       width: 30%;
       margin: 5px;
+      padding: 10px;
     }
     #sub:hover {
       color: #000000;
       background-color: #fff;
     }
+    h1 {
+      color: #fff;
+    }
   </style>
 </head>
 <body>
   <form action="/send-mail" method="POST" id="container">
-    <h1 style="color:#fff">MAIL SENDER</h1>
-    <input type="email" placeholder="ENTER RECEIVER EMAIL" name="receiver_email" id="send"><br><br>
-    <textarea rows="5" cols="10" placeholder="TYPE MESSAGE TO BE SENT" name="body" id="text"></textarea><br>
+    <h1>MAIL SENDER</h1>
+    <input type="email" placeholder="ENTER RECEIVER EMAIL" name="receiver_email" id="send" required><br><br>
+    <textarea rows="5" placeholder="TYPE MESSAGE TO BE SENT" name="body" id="text" required></textarea><br>
     <button type="submit" id="sub">SEND</button>
   </form>
+
+  
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+  
 </body>
 </html>
