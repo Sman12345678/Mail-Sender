@@ -40,7 +40,8 @@ def send_mail(sender_email, password, receiver_email, subject, body):
 # Flask routes
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template('.', 'index.html')
+
 
 @app.route("/send-mail", methods=["POST"])
 def send_message():
