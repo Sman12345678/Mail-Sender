@@ -1,77 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MAIL SENDER</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+  body{
+    font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
-      background-color: #000000;
-    }
-    #container {
-      border: solid 3px #fff;
-      border-radius: 10px;
-      width: 90%;
-      justify-content: center;
-      text-align: center;
-      height: 70%;
-      padding: 20px;
-    }
-    #send {
-      color: #fff;
-      background-color: #000000;
-      margin: 10px;
-      border-radius: 10px;
-      height: 40px;
-      width: 70%;
-      padding: 10px;
-      border:solid 3px #fff
-    }
-    #text {
-      width: 70%;
-      height: 150px;
-      border-radius: 10px;
-      color: orange;
-      font-size: 20px;
-      padding: 10px;
-      border:solid 3px #fff;
-    }
-    #sub {
-      background-color: black;
-      color: #fff;
-      border-radius: 10px;
-      height: 40px;
-      width: 30%;
-      margin: 5px;
-      padding: 10px;
-    }
-    #sub:hover {
-      color: #000000;
-      background-color: #fff;
-    }
-    h1 {
-      color: #fff;
-    }
+      background-color:#000000;
+  }
+  #container{
+    border:solid 3px #fff;
+    border-radius:10px;
+    width:90%;
+    justify-content:center;
+    text-align:center;
+    height:70%;
+ }
+  #send{
+    color:#fff;
+    background-color:#000000;
+    margin:10px;
+    border-radius:10px;
+    height:30px;
+    width:70%;
+    padding:10px;
+    border:solid 3px #fff;
+    font-size:40px;
+  }
+  #text{
+    width:70%;
+    height:70%;
+    border-radius:10px;
+    background-color:#000000;
+    color:orange;
+    font-size:40px;
+    border:solid 3px #fff;
+  }
+  #sub{
+    background-color:black;
+    color:#fff;
+    border-radius:10px;
+    height:50px;
+    width:20%;
+    margin:5px;
+    border:solid 3px #fff;
+    font-size:40px;
+  }
+  #sub:hover{
+    color:#000000;
+    background-color:#fff;
+  }
   </style>
 </head>
 <body>
-  <form action="/send-mail" method="POST" id="container">
-    <h1>MAIL SENDER 📨</h1>
-    <input type="email" placeholder="ENTER RECEIVER EMAIL" name="receiver_email" id="send" required><br><br>
-    <textarea rows="5" placeholder="TYPE MESSAGE TO BE SENT" name="body" id="text" required></textarea><br>
-    <button type="submit" id="sub">SEND</button>
+  
+  <form action="/send-mail" id="container">
+    <h1 style="color:#fff">MAIL SENDER 📨</h1>
+    <input type="email" placeholder="ENTER RECEIVER EMAIL" id="send" name="receiver-email"><br><br>
+    
+         <textarea rows="5" cols="10" placeholder="TYPE MESSAGE TO BE SENT" id="text" name="body"></textarea><br><br>
+    
+    <button type="submit" id="sub">SEND ✈</button>
+    
   </form>
-
-  
-    {% if message %}
-        <p>{{ message }}</p>
-    {% endif %}
-  
 </body>
 </html>
