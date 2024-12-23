@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>MAIL SENDER</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000000;
+    }
+    #container {
+      border: solid 1px #fff;
+      border-radius: 10px;
+      width: 90%;
+      justify-content: center;
+      text-align: center;
+      height: 90%;
+    }
+    #send {
+      color: #fff;
+      background-color: #000000;
+      margin: 10px;
+      border-radius: 10px;
+      height: 30px;
+      width: 70%;
+      padding: 10px;
+    }
+    #text {
+      width: 70%;
+      height: 50%;
+      border-radius: 10px;
+      color: orange;
+      font-size: 20px;
+    }
+    #sub {
+      background-color: black;
+      color: #fff;
+      border-radius: 10px;
+      height: 30px;
+      width: 30%;
+      margin: 5px;
+    }
+    #sub:hover {
+      color: #000000;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <form action="/send-mail" method="POST" id="container">
+    <h1 style="color:#fff">MAIL SENDER</h1>
+    <input type="email" placeholder="ENTER RECEIVER EMAIL" name="receiver_email" id="send"><br><br>
+    <textarea rows="5" cols="10" placeholder="TYPE MESSAGE TO BE SENT" name="body" id="text"></textarea><br>
+    <button type="submit" id="sub">SEND</button>
+  </form>
+</body>
+</html>
