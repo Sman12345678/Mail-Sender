@@ -43,7 +43,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/send-mail", methods=["POST"])
+@app.route("/send-email", methods=["POST"])
 def send_message():
     receiver_email = request.form.get("receiver_email")
     body = request.form.get("body")
